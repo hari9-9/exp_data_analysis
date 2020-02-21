@@ -1,4 +1,4 @@
-setwd("C:/Users/MAHE/Desktop/programming/Data Science/exploratorydataanalysis")# to set working directory with downloaded dataset
+setwd("C:/Users/MAHE/Desktop/programming/Data Science/exploratorydataanalysis")# to set working directory to downloaded dataset
 pow <- read.csv("household_power_consumption.txt", header=T, sep=';', na.strings="?", nrows=2075259, check.names=F, stringsAsFactors=F, comment.char="", quote='\"')#reading data set into variable pow
 pow_filtered<-subset(pow, Date %in% c("1/2/2007","2/2/2007"))#filtering out unwanted data
 pow_filtered$Date <- as.Date(pow_filtered$Date)#formatting date
